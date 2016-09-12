@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>me</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div data-menuanchor="firstPage" class="audio amon">
+    <audio id="media"  loop="loop" src="./bg.mp3"></audio>
+</div>
+<div id="fullpage">
+    <!-- 第一屏 -->
+    <section class="section" id="first">
+        <div class='parme'>
+            <div class="me"></div>
+        </div>
+        <div class='mename'>
+            <div class="fl">我是：</div>
+            <div class=fl>
+                <span class="nam"></span>
+                <span class="nam"></span>
+                <span class="nam"></span>
+            </div>
+        </div>
+        <div class='space'></div>
+        <div class="vocation animated flip">前端工程师</div>
+    </section>
+    <!-- 第二屏 -->
+    <section class="section" id="second">
+
+    </section>
+    <!-- 第三屏 -->
+    <section class="section" id="third">
+
+    </section>
+    <!-- 第四屏 -->
+    <section class="section" id="fourth">
+
+    </section>
+    <!-- 第五屏 -->
+    <section class="section" id="fifth">
+
+    </section>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $('#fullpage').fullpage({
+//        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+        afterLoad: function (link, index) {
+            $('.section').removeClass('curr');
+            setTimeout(function () {
+                $('.section').eq(index - 1).addClass('curr');
+            }, 100);
+        }
+    });
+</script>
+</body>
+</html>
