@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family:Helvetica;
 }
 
 ul {
@@ -9,6 +10,9 @@ ul {
 
 .fl {
   float: left;
+}
+.fr {
+  float: right;
 }
 
 .audio {
@@ -34,6 +38,12 @@ ul {
   to {
     transform: rotate(360deg);
   }
+}
+#fullpage {
+  width: 100%;
+  max-width: 640px;
+  min-width: 300px;
+  margin: 0 auto;
 }
 
 .section {
@@ -61,7 +71,7 @@ ul {
       background-image: url('../images/me.jpg');
       background-position: center;
       background-size: cover;
-      transform: rotate(540deg);
+      transform: rotate(720deg);
     }
   }
   .mename {
@@ -75,7 +85,6 @@ ul {
       text-align: right;
     }
     div:nth-child(2) {
-      width: 60%;
       overflow: hidden;
       span {
         display: inline-block;
@@ -107,10 +116,11 @@ ul {
     font-size: 50px;
     font-weight: 800;
     color: #fff;
-    letter-spacing:8px;
+    letter-spacing: 8px;
     color: #EDEDED;
   }
 }
+
 //处理animate.css
 @-webkit-keyframes flip {
   from {
@@ -185,18 +195,7 @@ ul {
     animation-timing-function: ease-in;
   }
 }
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-.animated.flip {
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible;
-  -webkit-animation-name: flip;
-  animation-name: flip;
-}
+
 //处理animate.css
 
 #first.curr {
@@ -207,12 +206,24 @@ ul {
     transition: all 1s ease-in 0.3s;
   }
   .mename .nam {
-    margin-left:0;
+    margin-left: 0;
     transition: all 1s ease-in 0.3s;
   }
   .space {
     width: 90%;
     transition: all 1s ease-out 0.3s;
+  }
+  .animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  .animated.flip {
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    -webkit-animation-name: flip;
+    animation-name: flip;
   }
 }
 
@@ -227,15 +238,125 @@ ul {
     border-color: rgb(255, 255, 0);
   }
 }
-
+/*2S*/
 #second {
   background-image: url('../images/bg2.png');
   background-size: cover;
+  position: relative;
+  .box {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    span {
+      display: table-cell;
+      vertical-align: middle;
+      font-size: 24px;
+      color: #fff;
+      padding-top: 30%;
+      text-align: center;
+    }
+  }
+
+  .one {
+    background-color: #F5BA42;
+    left: 7%;
+    top: -18%;
+  }
+  .two {
+    background-color: #9FD367;
+    left: 65%;
+    top: -30%;
+  }
+  .thr {
+    background-color: #D94351;
+    left: 18%;
+    top: -39%;
+  }
+  .fou {
+    background-color: #4FC1E9;
+    left: 51%;
+    top: -50%;
+  }
+  .fiv {
+    background-color: #EC87C1;
+    left: 21%;
+    top: -68%;
+  }
 }
 
+#second.curr {
+  .one {
+    top: 18%;
+    transition: all 0.7s cubic-bezier(0.87, 0.03, 0.4, 1.68) 0.7s;}
+  .two {
+    top: 30%;
+    transition: all 0.6s cubic-bezier(0, 0.03, 0.38, 1.54) 0.4s;  }
+  .thr {
+    top: 39%;
+    transition: all 0.4s cubic-bezier(0, 0.03, 0.38, 1.54) 0.5s;  }
+  .fou {
+    top: 50%;
+    transition: all 0.3s cubic-bezier(0, 0.03, 0.38, 1.54) 0.6s;  }
+  .fiv {
+    top: 68%;
+    transition: all 0.2s cubic-bezier(0, 0.03, 0.38, 1.54) 0.3s;  }
+}
+/*2E*/
+/*3S*/
 #third {
   background-image: url('../images/bg3.png');
   background-size: cover;
+  .frame {
+    background: url("../images/frame.png") no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 70%;
+    margin: 35% auto 0;
+    padding: 15% 5% 0 10%;
+    h2 {
+      width: 15%;
+      height: 40%;
+      font-size: 3em;
+      font-weight: 900;
+      opacity: 0;
+    }
+    .vline {
+      background: url("../images/vline.png") no-repeat center;
+      height: 10%;
+      width: 10%;
+      margin-top: 50%;
+    }
+    .describe {
+      padding-top: 5px;
+      width: 70%;
+      opacity: 0;
+      span {
+        font-size:20px;
+        line-height: 26px;
+        font-weight: 800;
+      }
+      p{
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+#third.curr {
+  .vline {
+    height: 60%;
+    transition: all 1s;
+    margin-top: 0;
+  }
+  h2 {
+    opacity: .7;
+    transition: all 2s ease-in .4s;
+  }
+  .describe {
+    transition: all 3s ease-in .3s;
+    opacity: .8;
+  }
 }
 
 #fourth {
@@ -244,7 +365,7 @@ ul {
 }
 
 #fifth {
-  background-image: url('../images/bg5.png');
+  background-image: url('../images/bg5.jpg');
   background-size: cover;
 }
 
