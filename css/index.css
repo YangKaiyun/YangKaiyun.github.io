@@ -35,8 +35,8 @@ h6 {
   right: 2.0rem;
   top: 2.0rem;
   z-index: 200;
-  width: 3.0rem;
-  height: 3.0rem;
+  width: 4.0rem;
+  height: 4.0rem;
   background: url("../images/music.svg");
   background-size: contain;
 }
@@ -103,8 +103,8 @@ h6 {
   display: inline-block;
   width: 3.5rem;
   height: 3.0rem;
-  margin-left: 30px;
   margin-top: 5px;
+  transform: translateX(500%);
 }
 #first .mename div:nth-child(2) span:nth-child(1) {
   background: url("../images/myname.fw.png") no-repeat -3px 0px;
@@ -201,8 +201,8 @@ h6 {
   transition: all 1s ease-in 0.3s;
 }
 #first.curr .mename .nam {
-  margin-left: 0;
-  transition: all 1s ease-in 0.3s;
+  transform: none;
+  transition: all 1s cubic-bezier(0.42, 0, 0.4, 1.32) 0.3s;
 }
 #first.curr .space {
   width: 90%;

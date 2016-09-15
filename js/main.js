@@ -3,10 +3,10 @@ $(function(){
 
    $('.audio').toggle(
         function(){
-            $('#media')[0].pause();
+            $('#media')[0].play();
         },
        function(){
-           $('#media')[0].play();
+           $('#media')[0].pause();
        }
    );
 

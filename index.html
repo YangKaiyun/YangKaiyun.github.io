@@ -9,14 +9,18 @@
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta content="email=no" name="format-detection" />
     <meta content="telephone=no" name="format-detection">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
 
     <title>杨凯云</title>
 
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-<div data-menuanchor="firstPage" class="audio amon">
-    <audio id="media" autoplay loop="loop" src="./bg.mp3"></audio>
+<div data-menuanchor="firstPage" class="audio">
+    <audio id="media">
+        <source src="./bg.mp3" type="audio/mp3">
+    </audio>
 </div>
 <div id="fullpage">
     <!-- 第一屏 -->
@@ -133,6 +137,15 @@
             }, 100);
         }
     });
+
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", hengshuping, false);
+    function hengshuping() {
+        if (window.orientation == 90 || window.orientation == -90) {
+            alert('请在竖屏下浏览');
+        } else {
+            //竖屏
+        }
+    }
 </script>
 </body>
 </html>
