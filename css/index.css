@@ -1,10 +1,28 @@
+html {
+  font-size: 62.5%;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: Helvetica;
 }
-ul {
+ul,
+li {
   list-style: none;
+}
+html,
+body,
+form,
+fieldset,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-text-size-adjust: 100%;
 }
 .fl {
   float: left;
@@ -14,11 +32,11 @@ ul {
 }
 .audio {
   position: fixed;
-  right: 20px;
-  top: 20px;
+  right: 2.0rem;
+  top: 2.0rem;
   z-index: 200;
-  width: 30px;
-  height: 30px;
+  width: 3.0rem;
+  height: 3.0rem;
   background: url("../images/music.svg");
   background-size: contain;
 }
@@ -35,8 +53,8 @@ ul {
 }
 #fullpage {
   width: 100%;
-  max-width: 640px;
-  min-width: 300px;
+  max-width: 64.0rem;
+  min-width: 30.0rem;
   margin: 0 auto;
 }
 .section {
@@ -51,14 +69,14 @@ ul {
 }
 #first .parme {
   width: 100%;
-  height: 200px;
+  height: 20.0rem;
   margin: 35% auto 0;
 }
 #first .parme .me {
   margin: 0 auto;
   width: 100px;
   height: 100px;
-  border: 5px solid #000;
+  border: 0.5rem solid #000;
   border-radius: 50%;
   overflow: hidden;
   animation: transfor 3s linear infinite;
@@ -68,8 +86,8 @@ ul {
   transform: rotate(720deg);
 }
 #first .mename {
-  padding-top: 90px;
-  font-size: 30px;
+  padding-top: 9.0rem;
+  font-size: 3.0rem;
   font-weight: 800;
   color: #fff;
   height: 38px;
@@ -83,10 +101,10 @@ ul {
 }
 #first .mename div:nth-child(2) span {
   display: inline-block;
-  width: 35px;
-  height: 30px;
+  width: 3.5rem;
+  height: 3.0rem;
   margin-left: 30px;
-  margin-top: 3px;
+  margin-top: 5px;
 }
 #first .mename div:nth-child(2) span:nth-child(1) {
   background: url("../images/myname.fw.png") no-repeat -3px 0px;
@@ -98,7 +116,7 @@ ul {
   background: url("../images/myname.fw.png") no-repeat -91px 0px;
 }
 #first .space {
-  height: 24px;
+  height: 2.4rem;
   width: 10%;
   margin: 0 auto;
   background-image: url("../images/line.png");
@@ -106,10 +124,10 @@ ul {
 }
 #first .vocation {
   text-align: center;
-  font-size: 50px;
+  font-size: 5.0rem;
   font-weight: 800;
   color: #fff;
-  letter-spacing: 8px;
+  letter-spacing: 0.8rem;
   color: #EDEDED;
 }
 @-webkit-keyframes flip {
@@ -228,7 +246,7 @@ ul {
 #second .box span {
   display: table-cell;
   vertical-align: middle;
-  font-size: 24px;
+  font-size: 2.4rem;
   color: #fff;
   padding-top: 30%;
   text-align: center;
@@ -236,7 +254,7 @@ ul {
 #second .one {
   background-color: #F5BA42;
   left: 7%;
-  top: -18%;
+  top: -30%;
 }
 #second .two {
   background-color: #9FD367;
@@ -306,18 +324,18 @@ ul {
   margin-top: 50%;
 }
 #third .frame .describe {
-  padding-top: 5px;
+  padding-top: 0.5rem;
   width: 70%;
   opacity: 0;
 }
 #third .frame .describe span {
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 2.0rem;
+  line-height: 2.6rem;
   font-weight: 800;
 }
 #third .frame .describe p {
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 2.0rem;
+  line-height: 2.6rem;
 }
 #third.curr .vline {
   height: 60%;
@@ -332,11 +350,141 @@ ul {
   transition: all 3s ease-in 0.3s;
   opacity: .8;
 }
+/*4S*/
 #fourth {
   background-image: url('../images/bg4.png');
   background-size: cover;
 }
+#fourth ul {
+  height: 100%;
+  padding-top: 15%;
+}
+#fourth ul li {
+  margin-bottom: 15px;
+  height: 75px;
+}
+#fourth ul li div:nth-child(1) {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 3px 3px 4px #888;
+  text-align: center;
+  line-height: 70px;
+  font-size: 30px;
+  font-weight: 900;
+  color: #fff;
+  position: relative;
+  z-index: 333;
+}
+#fourth ul li div:nth-child(2) {
+  height: 50px;
+  width: 76%;
+  margin-top: 10px;
+  line-height: 50px;
+  transform: translateX(100%);
+  border-radius: 0 10px 10px 0;
+  opacity: 0.3;
+  padding-left: 5%;
+  font-size: 2rem;
+}
+#fourth ul li:nth-child(1) div {
+  background-color: #D97171;
+}
+#fourth ul li:nth-child(2) div {
+  background-color: #389CD9;
+}
+#fourth ul li:nth-child(3) div {
+  background-color: #8CC83D;
+}
+#fourth ul li:nth-child(4) div {
+  background-color: #DF8A3C;
+}
+#fourth ul li:nth-child(5) div {
+  background-color: #9D62CC;
+}
+#fourth ul li:nth-child(6) div {
+  background-color: #24C650;
+}
+#fourth ul li:nth-child(7) div {
+  background-color: #DEAAA0;
+}
+#fourth.curr li div:nth-child(2) {
+  transform: translateX(-5%);
+}
+#fourth.curr li .one {
+  opacity: 1;
+  transition: all 0.8s;
+}
+#fourth.curr li .two {
+  opacity: 1;
+  transition: all 1s;
+}
+#fourth.curr li .thr {
+  opacity: 1;
+  transition: all 1.2s;
+}
+#fourth.curr li .fou {
+  opacity: 1;
+  transition: all 1.4s;
+}
+#fourth.curr li .fiv {
+  opacity: 1;
+  transition: all 1.6s;
+}
+#fourth.curr li .six {
+  opacity: 1;
+  transition: all 1.8s;
+}
+#fourth.curr li .sev {
+  opacity: 1;
+  transition: all 2s;
+}
 #fifth {
   background-image: url('../images/bg5.jpg');
   background-size: cover;
+}
+#fifth .tit {
+  font-size: 6rem;
+  font-weight: 800;
+  margin-top: 30%;
+  text-align: center;
+  opacity: 0.5;
+  animation: color 3s linear infinite;
+}
+#fifth .ad {
+  width: 100%;
+  padding: 20px 0 0 15%;
+  font-size: 3rem;
+  color: #079;
+  transform: translateX(-100%);
+}
+#fifth .foot {
+  height: 40px;
+  background: url("../images/foot.fw.png") no-repeat 0 0;
+  margin-top: 95px;
+  margin-left: 10%;
+  width: 0%;
+}
+@keyframes color {
+  0% {
+    color: #F01276;
+  }
+  50% {
+    color: #05B7F2;
+  }
+  100% {
+    color: #F01276;
+  }
+}
+#fifth.curr .tit {
+  opacity: 1;
+  transition: all 1s;
+}
+#fifth.curr .ad {
+  transform: none;
+  transition: all 1s cubic-bezier(0, 0, 0.24, 1.78) 0.3s;
+}
+#fifth.curr .foot {
+  width: 100%;
+  transition: all 4s;
 }
